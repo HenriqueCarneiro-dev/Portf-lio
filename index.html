@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Portfólio | Henrique Carneiro</title>
+</head>
+
+<body>
+    <div class="particulas"></div>
+
+    <nav class="navegacao">
+        <span class="Nav-logo">Portifolio | Henrique Carneiro</span>
+        <ul class="menu">
+            <li><a href="#inicio"       class="menu-link">Início</a></li>
+            <li><a href="#sobre"        class="menu-link">Sobre</a></li>
+            <li><a href="#skills"       class="menu-link">Skills</a></li>
+            <li><a href="#certificados" class="menu-link">Certificados</a></li>
+            <li><a href="projetos.html" class="menu-link">Projetos</a></li>
+            <li><a href="#github"       class="menu-link">GitHub</a></li>
+            <li><a href="#contatos"     class="menu-link">Contato</a></li>
+        </ul>
+    </nav>
+
+    <div class="pagina-conteudo">
+
+        <!-- HERO -->
+        <main id="inicio" class="hero-referencia">
+            <div class="hero-left">
+                <span class="status-badge">Disponível para projetos</span>
+                <h1 class="hero-title">Henrique <span>Carneiro</span></h1>
+                <p class="hero-desc">Estudante de Ciência da Computação na CESAR School. Apaixonado por cibersegurança e desenvolvimento de software.</p>
+                <div class="hero-pills">
+                    <span>Cibersegurança</span>
+                    <span>Dev. Software</span>
+                    <span>CESAR School · 1º período</span>
+                </div>
+                <div class="hero-actions">
+                    <a href="projetos.html" class="botao-projeto">Ver Projetos</a>
+                    <a href="#contatos"     class="botao-projeto">Contato</a>
+                </div>
+                <div class="terminal-wrapper">
+                    <div class="terminal-barra">
+                        <span class="terminal-dot vermelho"></span>
+                        <span class="terminal-dot amarelo"></span>
+                        <span class="terminal-dot verde"></span>
+                        <span class="terminal-titulo">henrique@portfolio ~ </span>
+                    </div>
+                    <div class="terminal-corpo" id="terminal-corpo"></div>
+                </div>
+            </div>
+            <div class="hero-right">
+                <div class="hc-logo">
+                    <img src="./imagens/henriquecarneiro.png" alt="Foto de Henrique Carneiro" class="hero-foto">
+                </div>
+                <div class="hero-mini">1º período · 2025</div>
+            </div>
+        </main>
+
+        <!-- SOBRE -->
+        <section id="sobre" class="sobre">
+            <h2 class="sobre-titulo">sobre mim</h2>
+            <div class="sobre-caixa">
+                <p class="sobre-paragrafo">
+                    Hello World! 👋 Meu nome é Henrique Carneiro, tenho 18 anos e atualmente sou estudante de Ciência da
+                    Computação na CESAR School. Tenho grande interesse em Cibersegurança e Desenvolvimento de Software.
+                    Mesmo estando em formação, venho construindo uma base sólida tanto na teoria quanto na prática,
+                    desenvolvendo projetos e aprimorando continuamente meus conhecimentos. Hoje possuo 4 cursos na
+                    CISCO Networking Academy e SENAC, e tenho como foco expandir cada vez mais meus conhecimentos!
+                </p>
+            </div>
+        </section>
+
+        <!-- SKILLS -->
+        <section id="skills" class="skills">
+            <h2 class="skills-titulo">Habilidades</h2>
+            <div class="skills-grid">
+
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <span class="skill-nome"><i class="fa-brands fa-python"></i> Python</span>
+                        <span class="skill-pct">70%</span>
+                    </div>
+                    <div class="skill-barra-fundo"><div class="skill-barra-fill" data-pct="70"></div></div>
+                    <p class="skill-label">Fundamentos · Cisco Academy · Projetos práticos</p>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <span class="skill-nome"><i class="fa-solid fa-code"></i> C++</span>
+                        <span class="skill-pct">50%</span>
+                    </div>
+                    <div class="skill-barra-fundo"><div class="skill-barra-fill" data-pct="50"></div></div>
+                    <p class="skill-label">Arduino · Projeto Pomar Memória · CESAR School</p>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <span class="skill-nome"><i class="fa-brands fa-js"></i> JavaScript</span>
+                        <span class="skill-pct">45%</span>
+                    </div>
+                    <div class="skill-barra-fundo"><div class="skill-barra-fill" data-pct="45"></div></div>
+                    <p class="skill-label">Essentials 1 · Cisco Academy · Web dev</p>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <span class="skill-nome"><i class="fa-solid fa-shield-halved"></i> Cibersegurança</span>
+                        <span class="skill-pct">30%</span>
+                    </div>
+                    <div class="skill-barra-fundo"><div class="skill-barra-fill" data-pct="30"></div></div>
+                    <p class="skill-label">Em formação · Redes · Fundamentos de segurança</p>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <span class="skill-nome"><i class="fa-brands fa-linux"></i> Linux</span>
+                        <span class="skill-pct">40%</span>
+                    </div>
+                    <div class="skill-barra-fundo"><div class="skill-barra-fill" data-pct="40"></div></div>
+                    <p class="skill-label">Shell · Bash · Ambiente de desenvolvimento</p>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <span class="skill-nome"><i class="fa-solid fa-network-wired"></i> Redes</span>
+                        <span class="skill-pct">35%</span>
+                    </div>
+                    <div class="skill-barra-fundo"><div class="skill-barra-fill" data-pct="35"></div></div>
+                    <p class="skill-label">TCP/IP · DNS · Cisco Networking Academy</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CERTIFICADOS -->
+        <section id="certificados" class="certificados">
+            <h2 class="certificados-titulo">Certificados</h2>
+            <div class="certificados-grid">
+
+                <div class="cert-card">
+                    <div class="cert-icone"><i class="fa-solid fa-diagram-project"></i></div>
+                    <span class="cert-badge">Gestão</span>
+                    <h3 class="cert-nome">Gestão ágil de projetos com Scrum e Kanban</h3>
+                    <p class="cert-inst">Certificado profissional</p>
+                    <a href="./Certificados/certificado FPA.pdf" target="_blank" class="cert-btn">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Ver certificado
+                    </a>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-icone"><i class="fa-brands fa-python"></i></div>
+                    <span class="cert-badge">Cisco</span>
+                    <h3 class="cert-nome">Fundamentos do Python 1</h3>
+                    <p class="cert-inst">Cisco Networking Academy</p>
+                    <a href="./Certificados/certificado fundamentos do Phyton 1.pdf" target="_blank" class="cert-btn">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Ver certificado
+                    </a>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-icone"><i class="fa-solid fa-microchip"></i></div>
+                    <span class="cert-badge">Cisco</span>
+                    <h3 class="cert-nome">Fundamentos do Hardware do Computador</h3>
+                    <p class="cert-inst">Cisco Networking Academy</p>
+                    <a href="./Certificados/Computer_Hardware_Basics_certificate.pdf" target="_blank" class="cert-btn">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Ver certificado
+                    </a>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-icone"><i class="fa-brands fa-js"></i></div>
+                    <span class="cert-badge">Cisco</span>
+                    <h3 class="cert-nome">Fundamentos de JavaScript 1</h3>
+                    <p class="cert-inst">Cisco Networking Academy</p>
+                    <a href="./Certificados/JavaScript_Essentials_1_certificate_jhcl-cesar-school_0be71254-7bcb-4f5e-975e-186901c0da1f.pdf" target="_blank" class="cert-btn">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Ver certificado
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- GITHUB -->
+        <section id="github" class="github-stats">
+            <h2 class="github-stats-titulo">GitHub</h2>
+            <p class="github-stats-sub">Clique para visitar o perfil</p>
+
+            <a href="https://github.com/HenriqueCarneiro-dev" target="_blank" class="github-card">
+                <div class="github-card-topo">
+                    <div class="github-avatar"><i class="fa-brands fa-github"></i></div>
+                    <div class="github-user-info">
+                        <h3>HenriqueCarneiro-dev</h3>
+                        <p>github.com/HenriqueCarneiro-dev</p>
+                    </div>
+                    <div class="github-badge">
+                        <i class="fa-solid fa-circle" style="font-size:0.5rem"></i> Ativo
+                    </div>
+                </div>
+
+                <div class="github-card-body">
+                    <div class="github-stats-grid">
+                        <div class="github-stat">
+                            <span class="github-stat-num">2+</span>
+                            <div class="github-stat-label">Repositórios</div>
+                        </div>
+                        <div class="github-stat">
+                            <span class="github-stat-num">1º</span>
+                            <div class="github-stat-label">Período</div>
+                        </div>
+                        <div class="github-stat">
+                            <span class="github-stat-num">2024</span>
+                            <div class="github-stat-label">Desde</div>
+                        </div>
+                    </div>
+
+                    <div class="github-langs">
+                        <div class="github-lang-linha">
+                            <span class="github-lang-nome">Python</span>
+                            <div class="github-lang-barra-fundo">
+                                <div class="github-lang-fill" style="width:60%; background:#3572A5"></div>
+                            </div>
+                            <span class="github-lang-pct">60%</span>
+                        </div>
+                        <div class="github-lang-linha">
+                            <span class="github-lang-nome">C++</span>
+                            <div class="github-lang-barra-fundo">
+                                <div class="github-lang-fill" style="width:25%; background:#f34b7d"></div>
+                            </div>
+                            <span class="github-lang-pct">25%</span>
+                        </div>
+                        <div class="github-lang-linha">
+                            <span class="github-lang-nome">HTML/CSS</span>
+                            <div class="github-lang-barra-fundo">
+                                <div class="github-lang-fill" style="width:15%; background:#e34c26"></div>
+                            </div>
+                            <span class="github-lang-pct">15%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="github-card-rodape">
+                    <span>Atualizado manualmente · 2025</span>
+                    <span class="github-link-hint">
+                        Ver perfil completo <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.7rem"></i>
+                    </span>
+                </div>
+            </a>
+        </section>
+
+        <!-- CONTATO -->
+        <section id="contatos" class="contatos">
+            <h2 class="contatos-titulo">Entre em Contato</h2>
+            <form class="formulario-contato" id="formulario">
+                <div class="grupo-form">
+                    <input placeholder="nome" class="campo-form">
+                </div>
+                <div class="grupo-form">
+                    <textarea class="campo-form" placeholder="Digite sua mensagem" rows="6"></textarea>
+                </div>
+                <button type="submit" class="botao-form">Enviar</button>
+            </form>
+        </section>
+
+        <footer class="footer">
+            <p>Feito por <span>Henrique Carneiro</span></p>
+            <div class="footer-links">
+                <a href="https://github.com/HenriqueCarneiro-dev" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/henrique-carneiro-b4b9ab3b0" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </footer>
+
+    </div><!-- fim pagina-conteudo -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script.js"></script>
+</body>
+</html>
