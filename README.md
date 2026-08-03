@@ -19,6 +19,6 @@ Este repositório contém o meu portfólolio (site estático) que reúne projeto
 - Layout responsivo para dispositivos móveis
 
 ## Contato
-- GitHub: https://github.com/HenriqueCarneiro-dev
-- josehenriquec127@gmail.com - GMAIL
-- linkedin.com/in/henrique-carneiro-dev
+- GMAIL: josehenriquec127@gmail.com 
+- GITHUB: https://github.com/HenriqueCarneiro-dev
+- LINKEDIN: www.linkedin.com/in/henrique-carneiro-dev
