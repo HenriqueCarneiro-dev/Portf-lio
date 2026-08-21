@@ -2,12 +2,12 @@
    TERMINAL TYPEWRITER
 ══════════════════════════════ */
 const linhas = [
-    { tipo: 'cmd',    texto: 'whoami' },
+    { tipo: 'cmd',    texto: 'seja bem vindo' },
     { tipo: 'output', texto: 'henrique_carneiro · CESAR School · 1º período', cor: 'azul' },
     { tipo: 'cmd',    texto: 'cat interesses.txt' },
-    { tipo: 'output', texto: '→ Cibersegurança  · Desenvolvimento de Software' },
+    { tipo: 'output', texto: '→ Engenharia de Software · Desenvolvimento de Software' },
     { tipo: 'cmd',    texto: 'ls habilidades/' },
-    { tipo: 'output', texto: 'python/  c++/  javascript/  linux/  redes/' },
+    { tipo: 'output', texto: 'python/  C++/  C/  linux/ javascript/  HTML/  CSS/' },
 ];
 
 const corpo = document.getElementById('terminal-corpo');
