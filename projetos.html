@@ -65,16 +65,15 @@
         }
 
         .projetos-grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
             gap: 2rem;
             max-width: 1200px;
             margin: 0 auto;
         }
 
         .projeto-card {
-            width: 420px;
+            width: 100%;
         }
 
         .projeto-card {
@@ -249,6 +248,19 @@
         }
 
         .voltar-btn:hover { color: var(--primaria); }
+
+        /* ── Responsivo: 3 colunas > 2 colunas > 1 coluna ── */
+        @media (max-width: 1000px) {
+            .projetos-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 640px) {
+            .projetos-grid {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 
@@ -321,13 +333,51 @@
                             <i class="fa-brands fa-github"></i> Ver no GitHub
                         </a>
                         <button class="btn-detalhes" onclick="toggleDetalhes('det-1', this)">
-                            <i class="fa-solid fa-chevron-down"></i> detalhes
+                            <i class="fa-solid fa-chevron-down"></i><span class="btn-detalhes-texto"> detalhes</span>
                         </button>
                     </div>
                 </div>
             </div>
 
             <!-- Projeto 2 -->
+            <div class="projeto-card" data-tags="Python">
+                <img src="./imagens/Finance_manager.PNG" alt="Finance Manager Planner" class="projeto-thumb"
+                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                <div class="projeto-thumb-placeholder" style="display:none">
+                    <i class="fa-solid fa-dumbbell"></i>
+                </div>
+                <div class="projeto-corpo">
+                    <div class="projeto-tags">
+                        <span class="projeto-tag">Python</span>
+                        <span class="projeto-tag">CLI</span>
+                    </div>
+                    <h3 class="projeto-titulo">Finance Manager</h3>
+                    <p class="projeto-desc">
+                        Ferramenta em Python para auxiliar e organizar receitas e despesas de um jeito prático, rapido e facil
+                    </p>
+                    <div class="projeto-detalhes" id="det-3">
+                        <ul>
+                            <li>Gestão de receitas e despesas (cadastro, edição, exclusão e visualização em tabela)</li>
+                            <li>Organização por categorias com orçamento mensal definido por você</li>
+                            <li>Relatórios completos (saldo, maiores gastos, distribuição por categoria)</li>
+                            <li>Análises financeiras (média mensal, comparação entre meses, tendências e percentuais)</li>
+                            <li>Sistema de alertas (orçamento ultrapassado, categoria crítica, metas atingidas)</li>
+                        </ul>
+                    </div>
+                    <div class="projeto-acoes">
+                        <a href="https://github.com/HenriqueCarneiro-dev" target="_blank" class="botao-projeto">
+                            <i class="fa-brands fa-github"></i> Ver no GitHub
+                        </a>
+                        <button class="btn-detalhes" onclick="toggleDetalhes('det-3', this)">
+                            <i class="fa-solid fa-chevron-down"></i><span class="btn-detalhes-texto"> detalhes</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- Projeto 3 -->
             <div class="projeto-card" data-tags="C++ Arduino Hardware">
                 <img src="./imagens/pomarmemoriapj1.PNG" alt="Pomar Memória" class="projeto-thumb"
                      onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
@@ -358,7 +408,7 @@
                             <i class="fa-solid fa-globe"></i> Ver site
                         </a>
                         <button class="btn-detalhes" onclick="toggleDetalhes('det-2', this)">
-                            <i class="fa-solid fa-chevron-down"></i> detalhes
+                            <i class="fa-solid fa-chevron-down"></i><span class="btn-detalhes-texto"> detalhes</span>
                         </button>
                     </div>
                 </div>
@@ -420,9 +470,10 @@
             const det = document.getElementById(id);
             const aberto = det.classList.toggle('aberto');
             const icone  = btn.querySelector('i');
+            const texto  = btn.querySelector('.btn-detalhes-texto');
             icone.style.transform = aberto ? 'rotate(180deg)' : 'rotate(0)';
             icone.style.transition = 'transform 0.3s ease';
-            btn.childNodes[1].textContent = aberto ? ' ocultar' : ' detalhes';
+            texto.textContent = aberto ? ' ocultar' : ' detalhes';
         }
     </script>
 </body>
