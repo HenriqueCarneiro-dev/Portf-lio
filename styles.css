@@ -21,7 +21,13 @@ html {
 body {
     background-color: var(--escuro);
     color: var(--claro);
+    overflow-x: hidden;
+    overflow-y: auto;
 }
+
+/* =========================
+   NAVEGAÇÃO
+   ========================= */
 
 .navegacao {
     position: fixed;
@@ -77,6 +83,10 @@ body {
     width: 100%;
 }
 
+/* =========================
+   CABEÇALHO
+   ========================= */
+
 .cabecalho {
     min-height: 100vh;
     display: flex;
@@ -107,6 +117,10 @@ h1 {
     color: var(--claro);
 }
 
+/* =========================
+   SOBRE
+   ========================= */
+
 .sobre {
     padding: 6rem 2rem;
 }
@@ -132,6 +146,10 @@ h1 {
     text-align: center;
     font-size: 1rem;
 }
+
+/* =========================
+   CONTATOS
+   ========================= */
 
 .contatos {
     padding: 6rem 2rem;
@@ -189,6 +207,10 @@ h1 {
     box-shadow: 0 5px 15px rgba(79, 70, 229, 0.4);
 }
 
+/* =========================
+   FUNDO
+   ========================= */
+
 .particulas {
     position: fixed;
     top: 0;
@@ -198,13 +220,24 @@ h1 {
     z-index: -1;
     opacity: 0.5;
     background:
-        radial-gradient(circle at 10% 20%, var(--primaria) 0%, transparent 20%),
-        radial-gradient(circle at 90% 80%, var(--secundaria) 0%, transparent 20%),
+        radial-gradient(
+            circle at 10% 20%,
+            var(--primaria) 0%,
+            transparent 20%
+        ),
+        radial-gradient(
+            circle at 90% 80%,
+            var(--secundaria) 0%,
+            transparent 20%
+        ),
         var(--maisEscuro);
 }
 
-@keyframes flutuar {
+/* =========================
+   ANIMAÇÃO
+   ========================= */
 
+@keyframes flutuar {
     0%,
     100% {
         transform: translateY(0);
@@ -214,6 +247,10 @@ h1 {
         transform: translateY(-20px);
     }
 }
+
+/* =========================
+   BOTÃO PROJETO
+   ========================= */
 
 .botao-projeto {
     display: inline-block;
@@ -231,6 +268,10 @@ h1 {
     background: var(--primaria);
     color: var(--claro);
 }
+
+/* =========================
+   FOOTER
+   ========================= */
 
 .footer {
     text-align: center;
@@ -266,6 +307,10 @@ h1 {
 .footer-links a:hover {
     color: var(--primaria);
 }
+
+/* =========================
+   CERTIFICADOS
+   ========================= */
 
 .certificados {
     padding: 6rem 2rem;
@@ -355,7 +400,10 @@ h1 {
     color: var(--claro);
 }
 
-/* ── Transição de página ── */
+/* =========================
+   TRANSIÇÃO DE PÁGINA
+   ========================= */
+
 @keyframes entrar {
     from {
         opacity: 0;
@@ -378,18 +426,27 @@ body.saindo .pagina-conteudo {
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
+/* =========================
+   HERO
+   ========================= */
+
 .hero-referencia {
     min-height: 100vh;
     display: grid;
-    grid-template-columns: 1.1fr .9fr;
+    grid-template-columns: 1.1fr 0.9fr;
     align-items: center;
     padding: 7rem 8%;
-    gap: 3rem
+    gap: 3rem;
+}
+
+.hero-left,
+.hero-right {
+    min-width: 0;
 }
 
 .hero-title {
     font-size: 5rem;
-    line-height: 1
+    line-height: 1;
 }
 
 .hero-title span {
@@ -403,23 +460,23 @@ body.saindo .pagina-conteudo {
 .hero-desc {
     max-width: 520px;
     font-size: 1.1rem;
-    margin: 1.5rem 0
+    margin: 1.5rem 0;
 }
 
 .status-badge,
 .hero-pills span,
 .hero-mini {
     display: inline-block;
-    padding: .6rem 1rem;
+    padding: 0.6rem 1rem;
     border-radius: 999px;
-    background: rgba(255, 255, 255, .06);
-    margin: .3rem
+    background: rgba(255, 255, 255, 0.06);
+    margin: 0.3rem;
 }
 
 .hero-actions {
     display: flex;
     gap: 1rem;
-    margin-top: 2rem
+    margin-top: 2rem;
 }
 
 .hc-logo {
@@ -432,32 +489,28 @@ body.saindo .pagina-conteudo {
     font-size: 6rem;
     font-weight: bold;
     background: linear-gradient(135deg, var(--primaria), var(--secundaria));
-    margin: auto
+    margin: auto;
+    overflow: hidden;
+    flex-shrink: 0;
 }
 
 .hero-right {
-    text-align: center
+    text-align: center;
 }
 
-@media(max-width:768px) {
-    .hero-referencia {
-        grid-template-columns: 1fr;
-        text-align: center
-    }
-
-    .hero-title {
-        font-size: 3.5rem
-    }
-
-    .hc-logo {
-        width: 260px;
-        height: 260px;
-        font-size: 4rem
-    }
+.hero-foto {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 50%;
+    display: block;
 }
-/* ════════════════════════════════
-   TERMINAL HERO
-════════════════════════════════ */
+
+/* =========================
+   TERMINAL
+   ========================= */
+
 .terminal-wrapper {
     margin-top: 1.5rem;
     width: 420px;
@@ -478,9 +531,18 @@ body.saindo .pagina-conteudo {
     height: 11px;
     border-radius: 50%;
 }
-.terminal-dot.vermelho { background: #ff5f57; }
-.terminal-dot.amarelo  { background: #febc2e; }
-.terminal-dot.verde    { background: #28c840; }
+
+.terminal-dot.vermelho {
+    background: #ff5f57;
+}
+
+.terminal-dot.amarelo {
+    background: #febc2e;
+}
+
+.terminal-dot.verde {
+    background: #28c840;
+}
 
 .terminal-titulo {
     margin: 0 auto;
@@ -506,14 +568,32 @@ body.saindo .pagina-conteudo {
     margin-bottom: 0.4rem;
     opacity: 0;
     transform: translateY(4px);
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
 }
-.terminal-linha.visivel { opacity: 1; transform: translateY(0); }
 
-.terminal-prompt { color: #4f46e5; }
-.terminal-cmd    { color: #e2e8f0; }
-.terminal-output { color: #3fb950; padding-left: 0; }
-.terminal-output.azul { color: #58a6ff; }
+.terminal-linha.visivel {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.terminal-prompt {
+    color: #4f46e5;
+}
+
+.terminal-cmd {
+    color: #e2e8f0;
+}
+
+.terminal-output {
+    color: #3fb950;
+    padding-left: 0;
+}
+
+.terminal-output.azul {
+    color: #58a6ff;
+}
 
 .cursor {
     display: inline-block;
@@ -525,14 +605,23 @@ body.saindo .pagina-conteudo {
 }
 
 @keyframes piscar {
-    0%, 100% { opacity: 1; }
-    50%       { opacity: 0; }
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
 }
 
-/* ════════════════════════════════
+/* =========================
    SKILLS
-════════════════════════════════ */
-.skills { padding: 6rem 2rem; }
+   ========================= */
+
+.skills {
+    padding: 6rem 2rem;
+}
 
 .skills-titulo {
     font-size: 2.5rem;
@@ -543,7 +632,10 @@ body.saindo .pagina-conteudo {
 
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(280px, 1fr)
+    );
     gap: 1.5rem;
     max-width: 900px;
     margin: 0 auto;
@@ -556,6 +648,7 @@ body.saindo .pagina-conteudo {
     padding: 1.5rem;
     transition: all 0.3s ease;
 }
+
 .skill-card:hover {
     transform: translateY(-4px);
     box-shadow: 0 8px 24px rgba(79, 70, 229, 0.15);
@@ -577,9 +670,17 @@ body.saindo .pagina-conteudo {
     font-weight: 600;
     color: var(--claro);
 }
-.skill-nome i { font-size: 1.1rem; color: var(--primaria); }
 
-.skill-pct { font-size: 0.8rem; color: #818cf8; font-family: monospace; }
+.skill-nome i {
+    font-size: 1.1rem;
+    color: var(--primaria);
+}
+
+.skill-pct {
+    font-size: 0.8rem;
+    color: #818cf8;
+    font-family: monospace;
+}
 
 .skill-barra-fundo {
     width: 100%;
@@ -592,7 +693,11 @@ body.saindo .pagina-conteudo {
 .skill-barra-fill {
     height: 100%;
     border-radius: 999px;
-    background: linear-gradient(90deg, var(--primaria), var(--secundaria));
+    background: linear-gradient(
+        90deg,
+        var(--primaria),
+        var(--secundaria)
+    );
     width: 0;
     transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -603,10 +708,13 @@ body.saindo .pagina-conteudo {
     color: rgba(226, 232, 240, 0.4);
 }
 
-/* ════════════════════════════════
+/* =========================
    GITHUB STATS
-════════════════════════════════ */
-.github-stats { padding: 6rem 2rem; }
+   ========================= */
+
+.github-stats {
+    padding: 6rem 2rem;
+}
 
 .github-stats-titulo {
     font-size: 2.5rem;
@@ -634,6 +742,7 @@ body.saindo .pagina-conteudo {
     text-decoration: none;
     display: block;
 }
+
 .github-card:hover {
     transform: translateY(-6px);
     box-shadow: 0 12px 32px rgba(79, 70, 229, 0.2);
@@ -652,7 +761,11 @@ body.saindo .pagina-conteudo {
     width: 48px;
     height: 48px;
     border-radius: 50%;
-    background: linear-gradient(135deg, var(--primaria), var(--secundaria));
+    background: linear-gradient(
+        135deg,
+        var(--primaria),
+        var(--secundaria)
+    );
     display: flex;
     align-items: center;
     justify-content: center;
@@ -661,8 +774,17 @@ body.saindo .pagina-conteudo {
     flex-shrink: 0;
 }
 
-.github-user-info h3 { font-size: 1rem; color: #e6edf3; margin: 0 0 2px; }
-.github-user-info p  { font-size: 0.8rem; color: #8b949e; margin: 0; }
+.github-user-info h3 {
+    font-size: 1rem;
+    color: #e6edf3;
+    margin: 0 0 2px;
+}
+
+.github-user-info p {
+    font-size: 0.8rem;
+    color: #8b949e;
+    margin: 0;
+}
 
 .github-badge {
     margin-left: auto;
@@ -677,7 +799,9 @@ body.saindo .pagina-conteudo {
     border-radius: 999px;
 }
 
-.github-card-body { padding: 1.4rem 1.6rem; }
+.github-card-body {
+    padding: 1.4rem 1.6rem;
+}
 
 .github-stats-grid {
     display: grid;
@@ -693,14 +817,38 @@ body.saindo .pagina-conteudo {
     border-radius: 8px;
     border: 1px solid #21262d;
 }
-.github-stat-num   { font-size: 1.5rem; font-weight: 700; color: #e6edf3; display: block; }
-.github-stat-label { font-size: 0.72rem; color: #8b949e; margin-top: 2px; }
 
-.github-langs { display: flex; flex-direction: column; gap: 0.6rem; }
+.github-stat-num {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #e6edf3;
+    display: block;
+}
 
-.github-lang-linha { display: flex; align-items: center; gap: 0.75rem; }
+.github-stat-label {
+    font-size: 0.72rem;
+    color: #8b949e;
+    margin-top: 2px;
+}
 
-.github-lang-nome  { font-size: 0.8rem; color: #8b949e; width: 60px; flex-shrink: 0; }
+.github-langs {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.github-lang-linha {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.github-lang-nome {
+    font-size: 0.8rem;
+    color: #8b949e;
+    width: 60px;
+    flex-shrink: 0;
+}
 
 .github-lang-barra-fundo {
     flex: 1;
@@ -709,9 +857,19 @@ body.saindo .pagina-conteudo {
     border-radius: 999px;
     overflow: hidden;
 }
-.github-lang-fill { height: 100%; border-radius: 999px; }
 
-.github-lang-pct { font-size: 0.75rem; color: #484f58; font-family: monospace; width: 32px; text-align: right; }
+.github-lang-fill {
+    height: 100%;
+    border-radius: 999px;
+}
+
+.github-lang-pct {
+    font-size: 0.75rem;
+    color: #484f58;
+    font-family: monospace;
+    width: 32px;
+    text-align: right;
+}
 
 .github-card-rodape {
     padding: 0.9rem 1.6rem;
@@ -720,7 +878,12 @@ body.saindo .pagina-conteudo {
     align-items: center;
     justify-content: space-between;
 }
-.github-card-rodape span { font-size: 0.78rem; color: #484f58; }
+
+.github-card-rodape span {
+    font-size: 0.78rem;
+    color: #484f58;
+}
+
 .github-card-rodape .github-link-hint {
     font-size: 0.78rem;
     color: #4f46e5;
@@ -729,158 +892,143 @@ body.saindo .pagina-conteudo {
     gap: 4px;
 }
 
-.hc-logo {
-    width: 340px;
-    height: 340px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 6rem;
-    font-weight: bold;
-    background: linear-gradient(135deg, var(--primaria), var(--secundaria));
-    margin: auto;
-    overflow: hidden;
-}
-
-.hero-foto {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center top;
-    border-radius: 50%;
-    display: block;
-}
-
-@media(max-width:768px) {
-    .hero-referencia { grid-template-columns: 1fr; text-align: center; }
-    .hero-title      { font-size: 3.5rem; }
-    .hc-logo         { width: 260px; height: 260px; font-size: 4rem; }
-}
-
-
-/*envia qualquer rolagem horizontal*/
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    background-color: var(--escuro);
-    color: var(--claro);
-    overflow-x: hidden;
-}
+/* =========================
+   IMAGEM DO HERO
+   ========================= */
 
 img {
     max-width: 100%;
     height: auto;
 }
 
-.skills-grid{
-    grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
-}
-
-.certificados-grid{
-    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
-}
+/* =========================
+   RESPONSIVIDADE GERAL
+   ========================= */
 
 .hero-left,
-.hero-right{
+.hero-right {
     min-width: 0;
 }
 
-/*TABLET / CELULAR ( até 768px ) */
+@media (max-width: 768px) {
 
-@media (max-width: 768px){
-    .navegacao{
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    /* NAVEGAÇÃO */
+
+    .navegacao {
         padding: 0.75rem 1rem;
         flex-direction: column;
         gap: 0.5rem;
     }
 
     .Nav-logo {
-        position: static;          /* antes era absolute e cobria o menu */
+        position: static;
         font-size: 0.9rem;
         white-space: normal;
         text-align: center;
     }
- 
+
     .menu {
         width: 100%;
         gap: 0.25rem;
         justify-content: flex-start;
-        overflow-x: auto;          /* menu rola para o lado em vez de estourar */
+        overflow-x: auto;
+        overflow-y: hidden;
         -webkit-overflow-scrolling: touch;
         scrollbar-width: none;
     }
- 
+
     .menu::-webkit-scrollbar {
         display: none;
     }
- 
+
     .menu li {
         flex: 0 0 auto;
     }
- 
+
     .menu-link {
         display: block;
         font-size: 0.85rem;
         padding: 0.5rem 0.6rem;
         white-space: nowrap;
     }
- 
-    /* ---- HERO ---- */
+
+    /* HERO */
+
     .hero-referencia {
-        padding: 9rem 1.25rem 3rem;  /* espaço extra por causa do menu fixo */
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 9rem 1.25rem 3rem;
         gap: 2rem;
         min-height: auto;
+        width: 100%;
+        max-width: 100%;
     }
- 
+
+    .hero-left,
+    .hero-right {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
     .hero-title {
         font-size: clamp(2.2rem, 11vw, 3.5rem);
         margin: 0.75rem 0;
         word-break: break-word;
     }
- 
+
     .hero-desc {
         margin: 1rem auto;
         font-size: 1rem;
     }
- 
+
     .hero-actions {
         flex-wrap: wrap;
         justify-content: center;
     }
- 
+
     .hc-logo {
         width: min(260px, 70vw);
         height: min(260px, 70vw);
+        font-size: 4rem;
     }
- 
-    /* Terminal ocupa a largura disponível */
+
+    /* TERMINAL */
+
     .terminal-wrapper {
         width: 100%;
         max-width: 100%;
         text-align: left;
     }
- 
+
     .terminal-corpo {
         font-size: 0.78rem;
         padding: 1rem;
+        max-width: 100%;
         overflow-x: auto;
     }
- 
-    /* ---- SEÇÕES: menos espaçamento ---- */
+
+    /* SEÇÕES */
+
     .sobre,
     .skills,
     .certificados,
     .github-stats,
     .contatos {
         padding: 4rem 1.25rem;
-        /* scroll-margin evita que o título fique escondido atrás do menu fixo */
         scroll-margin-top: 6rem;
+        width: 100%;
+        max-width: 100%;
     }
- 
+
     .sobre-titulo,
     .skills-titulo,
     .certificados-titulo,
@@ -889,76 +1037,123 @@ img {
         font-size: 2rem;
         margin-bottom: 1.5rem;
     }
- 
+
     .sobre-caixa {
         padding: 1.25rem;
+        width: 100%;
+        max-width: 100%;
     }
- 
+
     .formulario-contato {
         padding: 1.25rem;
+        width: 100%;
+        max-width: 100%;
     }
- 
-    /* ---- CARD DO GITHUB ---- */
+
+    /* SKILLS */
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* CERTIFICADOS */
+
+    .certificados-grid {
+        grid-template-columns: 1fr;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* GITHUB */
+
+    .github-card {
+        width: 100%;
+        max-width: 100%;
+    }
+
     .github-card-topo {
         flex-wrap: wrap;
         padding: 1rem;
     }
- 
+
     .github-user-info {
         min-width: 0;
         flex: 1;
     }
- 
+
     .github-user-info h3,
     .github-user-info p {
         overflow-wrap: anywhere;
     }
- 
+
     .github-card-body {
         padding: 1rem;
     }
- 
+
     .github-card-rodape {
         flex-direction: column;
         align-items: flex-start;
         gap: 0.4rem;
         padding: 0.9rem 1rem;
     }
- 
-    /* ---- Botões maiores para toque ---- */
+
+    /* BOTÕES */
+
     .botao-projeto,
     .cert-btn {
         padding: 0.7rem 1.2rem;
     }
 }
- 
-/* ------------------------------------------------------------
-   CELULARES PEQUENOS (até 480px)
-   ------------------------------------------------------------ */
+
+/* =========================
+   CELULARES PEQUENOS
+   ========================= */
+
 @media (max-width: 480px) {
- 
+
     .github-stats-grid {
+        grid-template-columns: 1fr;
         gap: 0.5rem;
     }
- 
+
     .github-stat {
         padding: 0.5rem;
     }
- 
+
     .github-stat-num {
         font-size: 1.2rem;
     }
- 
+
     .hero-pills span,
     .status-badge,
     .hero-mini {
         font-size: 0.85rem;
         padding: 0.45rem 0.8rem;
     }
+
+    .hero-referencia {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .sobre,
+    .skills,
+    .certificados,
+    .github-stats,
+    .contatos {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
 }
- 
-/* Em telas de toque, desativa os efeitos de "hover" que ficam grudados */
+
+/* =========================
+   TOUCH
+   ========================= */
+
 @media (hover: none) {
+
     .cert-card:hover,
     .skill-card:hover,
     .github-card:hover {
