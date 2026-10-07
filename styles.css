@@ -757,3 +757,201 @@ body.saindo .pagina-conteudo {
     .hero-title      { font-size: 3.5rem; }
     .hc-logo         { width: 260px; height: 260px; font-size: 4rem; }
 }
+
+html, body{
+    overflow: hidden;
+}
+
+img {
+    max-width:  100px;
+}
+
+.skills-grid{
+    grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
+}
+
+.certificados-grid{
+    grid-template-columns: repeat(auto-fir, minmax(200px, 100%), 1fr);
+}
+
+.hero-left,
+.hero-right{
+    min-width: 0;
+}
+
+/*TABLET / CELULAR ( até 768px ) */
+
+@media (max-width: 768px){
+    .navegacao{
+        padding: 0.75rem 1rem;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+.Nav-logo {
+        position: static;          /* antes era absolute e cobria o menu */
+        font-size: 0.9rem;
+        white-space: normal;
+        text-align: center;
+    }
+ 
+    .menu {
+        width: 100%;
+        gap: 0.25rem;
+        justify-content: flex-start;
+        overflow-x: auto;          /* menu rola para o lado em vez de estourar */
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+ 
+    .menu::-webkit-scrollbar {
+        display: none;
+    }
+ 
+    .menu li {
+        flex: 0 0 auto;
+    }
+ 
+    .menu-link {
+        display: block;
+        font-size: 0.85rem;
+        padding: 0.5rem 0.6rem;
+        white-space: nowrap;
+    }
+ 
+    /* ---- HERO ---- */
+    .hero-referencia {
+        padding: 9rem 1.25rem 3rem;  /* espaço extra por causa do menu fixo */
+        gap: 2rem;
+        min-height: auto;
+    }
+ 
+    .hero-title {
+        font-size: clamp(2.2rem, 11vw, 3.5rem);
+        margin: 0.75rem 0;
+        word-break: break-word;
+    }
+ 
+    .hero-desc {
+        margin: 1rem auto;
+        font-size: 1rem;
+    }
+ 
+    .hero-actions {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+ 
+    .hc-logo {
+        width: min(260px, 70vw);
+        height: min(260px, 70vw);
+    }
+ 
+    /* Terminal ocupa a largura disponível */
+    .terminal-wrapper {
+        width: 100%;
+        max-width: 100%;
+        text-align: left;
+    }
+ 
+    .terminal-corpo {
+        font-size: 0.78rem;
+        padding: 1rem;
+        overflow-x: auto;
+    }
+ 
+    /* ---- SEÇÕES: menos espaçamento ---- */
+    .sobre,
+    .skills,
+    .certificados,
+    .github-stats,
+    .contatos {
+        padding: 4rem 1.25rem;
+        /* scroll-margin evita que o título fique escondido atrás do menu fixo */
+        scroll-margin-top: 6rem;
+    }
+ 
+    .sobre-titulo,
+    .skills-titulo,
+    .certificados-titulo,
+    .github-stats-titulo,
+    .contatos-titulo {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+ 
+    .sobre-caixa {
+        padding: 1.25rem;
+    }
+ 
+    .formulario-contato {
+        padding: 1.25rem;
+    }
+ 
+    /* ---- CARD DO GITHUB ---- */
+    .github-card-topo {
+        flex-wrap: wrap;
+        padding: 1rem;
+    }
+ 
+    .github-user-info {
+        min-width: 0;
+        flex: 1;
+    }
+ 
+    .github-user-info h3,
+    .github-user-info p {
+        overflow-wrap: anywhere;
+    }
+ 
+    .github-card-body {
+        padding: 1rem;
+    }
+ 
+    .github-card-rodape {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.4rem;
+        padding: 0.9rem 1rem;
+    }
+ 
+    /* ---- Botões maiores para toque ---- */
+    .botao-projeto,
+    .cert-btn {
+        padding: 0.7rem 1.2rem;
+    }
+}
+ 
+/* ------------------------------------------------------------
+   CELULARES PEQUENOS (até 480px)
+   ------------------------------------------------------------ */
+@media (max-width: 480px) {
+ 
+    .github-stats-grid {
+        gap: 0.5rem;
+    }
+ 
+    .github-stat {
+        padding: 0.5rem;
+    }
+ 
+    .github-stat-num {
+        font-size: 1.2rem;
+    }
+ 
+    .hero-pills span,
+    .status-badge,
+    .hero-mini {
+        font-size: 0.85rem;
+        padding: 0.45rem 0.8rem;
+    }
+}
+ 
+/* Em telas de toque, desativa os efeitos de "hover" que ficam grudados */
+@media (hover: none) {
+    .cert-card:hover,
+    .skill-card:hover,
+    .github-card:hover {
+        transform: none;
+    }
+}
