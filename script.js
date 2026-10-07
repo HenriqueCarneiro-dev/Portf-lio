@@ -3,8 +3,8 @@
 ══════════════════════════════ */
 const linhas = [
     { tipo: 'cmd',    texto: 'seja bem vindo' },
-    { tipo: 'output', texto: 'henrique_carneiro · CESAR School · 1º período', cor: 'azul' },
-    { tipo: 'cmd',    texto: 'cat interesses.txt' },
+    { tipo: 'output', texto: 'henrique_carneiro · CESAR School · 2º período', cor: 'azul' },
+    { tipo: 'cmd',    texto: 'interesses.txt' },
     { tipo: 'output', texto: '→ Engenharia de Software · Desenvolvimento de Software' },
     { tipo: 'cmd',    texto: 'ls habilidades/' },
     { tipo: 'output', texto: 'python/  C++/  C/  linux/ javascript/  HTML/  CSS/' },
