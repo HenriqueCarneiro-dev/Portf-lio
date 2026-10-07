@@ -758,6 +758,9 @@ body.saindo .pagina-conteudo {
     .hc-logo         { width: 260px; height: 260px; font-size: 4rem; }
 }
 
+
+/*envia qualquer rolagem horizontal*/
+
 html, body{
     overflow: hidden;
 }
@@ -788,7 +791,7 @@ img {
         gap: 0.5rem;
     }
 
-.Nav-logo {
+    .Nav-logo {
         position: static;          /* antes era absolute e cobria o menu */
         font-size: 0.9rem;
         white-space: normal;
