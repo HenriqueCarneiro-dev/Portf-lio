@@ -761,12 +761,19 @@ body.saindo .pagina-conteudo {
 
 /*envia qualquer rolagem horizontal*/
 
-html, body{
-    overflow: hidden;
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--escuro);
+    color: var(--claro);
+    overflow-x: hidden;
 }
 
 img {
-    max-width:  100px;
+    max-width: 100%;
+    height: auto;
 }
 
 .skills-grid{
@@ -774,7 +781,7 @@ img {
 }
 
 .certificados-grid{
-    grid-template-columns: repeat(auto-fir, minmax(200px, 100%), 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
 }
 
 .hero-left,
